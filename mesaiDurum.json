@@ -1,7 +1,7 @@
 {
   "1217719164463087701": {
     "baslamaZamani": null,
-    "toplamSure": 3000,
+    "toplamSure": 3018,
     "ilkGirisZamani": 1754923091831
   },
   "716187309078478859": {
@@ -15,6 +15,12 @@
   },
   "914549841810579477": {
     "baslamaZamani": null,
-    "toplamSure": 7
+    "toplamSure": 10,
+    "ilkGirisZamani": 1754929731879
+  },
+  "817061484357615647": {
+    "baslamaZamani": null,
+    "ilkGirisZamani": 1754934915302,
+    "toplamSure": 6742
   }
 }

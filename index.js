@@ -1,8 +1,9 @@
+require('dotenv').config(); // en başta ekle
+
 const { Client, GatewayIntentBits, Collection, REST, Routes } = require('discord.js');
 const fs = require('fs');
 const mongoose = require('mongoose');
 const express = require('express');
-const config = require('./settings.json');
 const { router: embedRouter, setClient: setEmbedClient } = require('./utils/embedRoutes');
 const { router: mazeretRouter, setClient: setMazeretClient } = require('./utils/mazeretRoutes');
 
@@ -11,11 +12,11 @@ const client = new Client({
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.MessageContent,
-    GatewayIntentBits.GuildMembers,  // Bunu ekle!
+    GatewayIntentBits.GuildMembers,
   ],
 });
 
-mongoose.connect(config.bot.mongoURI, {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => {
@@ -34,13 +35,13 @@ for (const file of commandFiles) {
   commands.push(command.data.toJSON());
 }
 
-const rest = new REST({ version: '10' }).setToken(config.bot.token);
+const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_BOT_TOKEN);
 (async () => {
   try {
     console.log('Started refreshing application (/) commands.');
 
     await rest.put(
-      Routes.applicationGuildCommands(config.bot.id, config.guild.id),
+      Routes.applicationGuildCommands(process.env.DISCORD_CLIENT_ID, process.env.GUILD_ID),
       { body: commands },
     );
 
@@ -61,17 +62,17 @@ for (const file of eventFiles) {
   }
 }
 
-client.login(config.bot.token);
+client.login(process.env.DISCORD_BOT_TOKEN);
 
 const app = express();
-const port = config.web.port;
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use('/', embedRouter);
 app.use('/', mazeretRouter);
 
 app.listen(port, () => {
-  console.log(`Server is running at ${config.web.hostname}${port}`);
+  console.log(`Server is running at http://localhost:${port}`);
 });
 
 setEmbedClient(client);

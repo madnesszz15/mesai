@@ -1,5 +1,7 @@
 require('dotenv').config(); // en başta ekle
 
+console.log("ENV'den gelen token:", process.env.DISCORD_BOT_TOKEN);
+
 const { Client, GatewayIntentBits, Collection, REST, Routes } = require('discord.js');
 const fs = require('fs');
 const mongoose = require('mongoose');

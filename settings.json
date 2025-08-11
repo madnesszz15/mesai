@@ -1,0 +1,75 @@
+{
+  "bot": {
+    "token": "",
+    "id": "1403777812497960991",
+    "mongoURI": "",
+    "status": {
+      "activity": "playing",
+      "text": "Şuanda %onDutyPolice% kişi mesaide.",
+      "status": "online",
+      "twitch": "",
+      "logChannelId": "1402782154852667414",
+      "mesaiLogChannelId": "1402782133294071960",
+      "yetkiliRoleId": "1402779866822348860"
+    }
+  },
+  "guild": {
+    "id": "1258764433606578206"
+  },
+  "settings": {
+    "departmentName": "BCSO",
+    "departmentLogo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Froninroleplay.fandom.com%2Ftr%2Fwiki%2FBCSO&psig=AOvVaw0beCKFLXHDjGatvIw0EMIf&ust=1754945335488000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCJDzuYuPgY8DFQAAAAAdAAAAABAE",
+    "departmentBanner": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fforum.v-rp.pl%2Ftopic%2F7865-blaine-county-sheriffs-office%2F&psig=AOvVaw06r0VHVZhDYfh8XzHKNYPR&ust=1754945405184000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCNis5p2PgY8DFQAAAAAdAAAAABAK",
+    "departmentColor": "#047a18",
+    "emojis": {
+      "on": "✅",
+      "off": "❌",
+      "warning": "⚠️",
+      "clock": "⏰",
+      "department": "🏢",
+      "info": "ℹ️"
+    },
+    "roles": {
+      "sheriffs": [
+      "1258776596110639217",
+      "1258776591367143514",
+      "1262029738524803173",
+      "1262156146454560880",
+      "1258776598669430784",
+      "1258776622819967049",
+      "1262156085402271835",
+      "1262156085402271835",
+      "1262152416246366238",
+      "1258777615808991283",
+      "1259143816158511145",
+      "1262835958223474859",
+      "1258856732269084754",
+      "1267618370136834159",
+      "1266476435980423218",
+      "1267618440034648166",
+      "1258777943857954886",
+      "1269714265489543200",
+      "1403481246792683622",
+      "1402740491262496850",
+      "1258777951768547410",
+      "1402740231236485120",
+      "1402740409150472202"
+      ]
+    },
+    "channels": {
+      "log": "1402782154852667414",
+      "çıkış": "1402782133294071960",
+      "denetim": "1402782154852667414",
+      "": ""
+    }
+  },
+  "commands": {
+    "activeDuty": {
+      "requiredRole": "1402779866822348860"
+    }
+  },
+  "web": {
+      "hostname": "localhost",
+      "port": "3000"
+  }
+}

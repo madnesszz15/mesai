@@ -1,0 +1,6 @@
+{
+  "test": {
+    "my_value_1": "#{MY_VALUE_1}",
+    "my_value_2": "#{MY_VALUE_2}"
+  }
+}
